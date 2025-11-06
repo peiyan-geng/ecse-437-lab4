@@ -11,7 +11,7 @@ function App() {
 
   const calculate = async () => {
     try {
-      const response = await axios.post('http://<your-api-url>/calculate', {
+      const response = await axios.post('http://localhost:5000/calculate', {
         num1,
         num2,
         operation,
