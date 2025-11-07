@@ -8,10 +8,11 @@ function App() {
   const [operation, setOperation] = useState('add');
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
   const calculate = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/calculate', {
+      const response = await axios.post(`${API_URL}/calculate`, {
         num1,
         num2,
         operation,
